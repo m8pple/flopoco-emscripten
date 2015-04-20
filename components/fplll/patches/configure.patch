@@ -1,0 +1,57 @@
+--- build/fplll/downloads/libfplll-3.0.12/configure	2009-05-10 10:08:26.000000000 +0000
++++ components/fplll/patches/configure	2015-04-20 21:50:05.371584543 +0000
+@@ -20478,6 +20478,11 @@
+ 
+ # Checks for libraries.
+ 
++dont_link_with_gmp=yes
++if test "$dont_link_with_gmp" = yes ; then
++LIBS="-lgmp $LIBS"
++else
++
+ { echo "$as_me:$LINENO: checking for __gmpz_init in -lgmp" >&5
+ echo $ECHO_N "checking for __gmpz_init in -lgmp... $ECHO_C" >&6; }
+ if test "${ac_cv_lib_gmp___gmpz_init+set}" = set; then
+@@ -20552,6 +20557,14 @@
+    { (exit 1); exit 1; }; }
+ fi
+ 
++fi
++
++
++
++dont_link_with_mpfr=yes
++if test "$dont_link_with_mpfr" = yes ; then
++LIBS="-lmpfr $LIBS"
++else
+ 
+ { echo "$as_me:$LINENO: checking for mpfr_add in -lmpfr" >&5
+ echo $ECHO_N "checking for mpfr_add in -lmpfr... $ECHO_C" >&6; }
+@@ -20627,7 +20640,7 @@
+    { (exit 1); exit 1; }; }
+ fi
+ 
+-
++fi
+ 
+ 
+ # Check whether --with-mpfr was given.
+@@ -21802,6 +21815,10 @@
+ done
+ 
+ 
++dont_check_gmp_or_mpfr_version=yes
++if test "$dont_check_gmp_or_mpfr_version" = yes; then
++LIBS="-lgmp $LIBS"
++else
+ 
+ 
+ { echo "$as_me:$LINENO: checking for __gmp_get_memory_functions in -lgmp" >&5
+@@ -21954,6 +21971,7 @@
+    { (exit 1); exit 1; }; }
+ fi
+ 
++fi
+ 
+ ac_config_files="$ac_config_files Makefile src/Makefile"
+ 

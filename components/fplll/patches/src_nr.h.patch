@@ -1,0 +1,11 @@
+--- build/fplll/downloads/libfplll-3.0.12/src/nr.h	2008-09-01 06:34:02.000000000 +0000
++++ components/fplll/patches/nr.h	2015-04-20 22:27:16.878743884 +0000
+@@ -122,7 +122,7 @@
+ {
+   F data;
+  public:
+-  typedef struct assoc_int_struct<F>::assoc_int assoc_int;
++  typedef typename assoc_int_struct<F>::assoc_int assoc_int;
+   inline FP_NR<F>();
+   inline FP_NR<F>(const FP_NR<F>& f);
+   inline ~FP_NR<F>();
