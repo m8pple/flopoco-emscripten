@@ -1,6 +1,6 @@
---- config.h.original	2013-02-25 13:11:03.628000004 +0000
-+++ config.h	2013-02-25 13:11:23.260000004 +0000
-@@ -199,10 +199,10 @@
+--- config.h.old	2015-04-20 18:50:37.028262172 +0000
++++ config.h	2015-04-20 18:52:12.779065564 +0000
+@@ -209,10 +209,10 @@
  #define HAVE_LOCALE_H 1
  
  /* Define to 1 if the system has the type `long double'. */
@@ -13,7 +13,7 @@
  
  /* Define to 1 if you have the <machine/hal_sysinfo.h> header file. */
  /* #undef HAVE_MACHINE_HAL_SYSINFO_H */
-@@ -343,7 +343,7 @@
+@@ -354,7 +354,7 @@
  #define HAVE_NL_TYPES_H 1
  
  /* Define to 1 if you have the `obstack_vprintf' function. */
@@ -22,7 +22,7 @@
  
  /* Define to 1 if you have the `popen' function. */
  #define HAVE_POPEN 1
-@@ -362,7 +362,7 @@
+@@ -373,7 +373,7 @@
  #define HAVE_PTRDIFF_T 1
  
  /* Define to 1 if the system has the type `quad_t'. */

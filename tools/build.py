@@ -1,3 +1,4 @@
+import sys
 import os
 import shutil
 from subprocess import call
@@ -28,10 +29,13 @@ def build_component(name, includes_dir, libs_dir, working_dir=None):
 
     # Step 3 - Configure
     try:
+	print "Running configure"
         command = component.CONFIGURE_CMD.format(includes=os.path.abspath(includes_dir), libs=os.path.abspath(libs_dir),
                                                  component_dir=os.path.abspath(component_dir))
+	print "  command = {0}".format(command)
         call(command, cwd=source_dir, shell=True)
-    except:
+    except Exception as e:
+	print "   Exception : {0}".format(e)
         pass
 
     # Step 4 - Patch any generated config or headers (IE Anything that's not in the original tarball)
