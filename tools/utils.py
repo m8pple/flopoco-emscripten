@@ -36,7 +36,7 @@ def untar(tar_file, dest_path):
     print "Finished unarchiving"
 
 def is_archive_file(archive_path):
-    return archive_path.split('.')[-1] == 'bz2'
+    return archive_path.split('.')[-1] == 'bz2' or archive_path.split('.')[-1]=='gz'
 
 
 
