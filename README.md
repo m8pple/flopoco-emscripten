@@ -3,7 +3,7 @@ flopoco-emscripten
 
 This is a work in progress to see if [FloPoCo](http://flopoco.gforge.inria.fr/) will compile
 in emscripten. It is based on the work to compile  [CGAL](http://www.cgal.org/), and is forked
-from (https://github.com/marcosscriven/cgaljs)[https://github.com/marcosscriven/cgaljs].
+from [https://github.com/marcosscriven/cgaljs](https://github.com/marcosscriven/cgaljs).
 
 Status
 ------
